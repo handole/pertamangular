@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
-import {routerConfig} from '../router.config';
+import {routes} from '../router.config';
 import { AppComponent } from './app.component';
 import { ResumeComponent } from './resume/resume.component';
 import { HeaderComponent } from './header/header.component';
@@ -12,6 +12,9 @@ import { CategoriesMenuComponent } from './categories-menu/categories-menu.compo
 import { RouterModule } from '@angular/router';
 import { RouterConfigLoader } from '@angular/router/src/router_config_loader';
 import { HomeComponent } from './home/home.component';
+import { DapilComponent } from './dapil/dapil.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,14 +23,17 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     AboutComponent,
     CategoriesMenuComponent,
-    HomeComponent
+    HomeComponent,
+    DapilComponent,
+    ProductListComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routerConfig)
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
